@@ -6,7 +6,7 @@ Steps to manually download and install intellicode models:
   - Create a folder called "cache" if not present
   - Download the models from the releases page, and download the models.json from the repo, and place everything in the cache folder 
   - Change the <username> to your username in the models.json file
-    - you're looking for something like "filePath":"c:\\Users\\<USERNAME>\\.vscode\\extensions\\visualstudioexptteam.vscodeintellicode-1.2.17\\cache\\E61945A9A512ED5E1A3EE3F1A2365B88F8FE_E4E9EADA96734F01970E616FAB2FAC19"
+    - you're looking for something like "filePath":"`c:\\Users\\<USERNAME>\\.vscode\\extensions\\visualstudioexptteam.vscodeintellicode-1.2.17\\cache\\E61945A9A512ED5E1A3EE3F1A2365B88F8FE_E4E9EADA96734F01970E616FAB2FAC19`"
   - Also don't forget to check the version in the path string:
     - you're looking for the `\\visualstudioexptteam.vscodeintellicode-1.2.17\\cache` part
     - change it, if necessary, to what you find on your machine [from step 1]
