@@ -1,0 +1,132 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+
+format = """
+$username\
+$all\
+$time\
+$character\
+"""
+
+command_timeout = 1000
+
+[shell]
+# bash_indicator = '󱆃'
+bash_indicator = '#!'
+fish_indicator = '󰈺'
+# powershell_indicator = '_'
+# powershell_indicator = '⚡'
+powershell_indicator = ''
+zsh_indicator = '⚡sh'
+# command_prompt_indicator = '󰨡 ' ??
+unknown_indicator = 'mystery shell'
+style = 'cyan bold'
+disabled = false
+format='[$indicator]($style) '
+
+
+# [battery]
+# full_symbol = '🔋 '
+# charging_symbol = '⚡️ '
+# discharging_symbol = '💀 '
+# disabled = false
+
+# [[battery.display]] # 'bold red' style and discharging_symbol when capacity is between 0% and 10%
+# threshold = 10
+# style = 'bold red'
+
+# [[battery.display]] # 'bold yellow' style and 💦 symbol when capacity is between 10% and 30%
+# threshold = 30
+# style = 'bold yellow'
+# discharging_symbol = '💦'
+
+# [[battery.display]] # 'bold yellow' style and 💦 symbol when capacity is between 10% and 30%
+# threshold = 100
+# style = 'bold green'
+
+
+
+[cmd_duration]
+min_time = 500
+# format = 'underwent [$duration](bold yellow)'
+
+
+[docker_context]
+format = 'via [🐋 $context](blue bold)'
+
+[username]
+format = '[$user]($style) '
+
+[hostname]
+# ssh_only = false
+# disabled = true
+format = '[$ssh_symbol](bold blue)[$hostname](fg:#72de3e) in'
+# format = '[$ssh_symbol](bold blue)[$hostname](fg:green) '
+
+[conda]
+symbol = '🐍'
+# format = '[$symbol $environment](green) '
+
+[directory]
+truncation_length = 2
+truncation_symbol = '…/'
+truncate_to_repo = false
+# style = '#50e6ff'
+format = 'in [$path]($style)[$read_only]($read_only_style) '
+
+[git_branch]
+symbol = '🌱 '
+truncation_length = 19
+# truncation_symbol = ''
+# ignore_branches = ['master', 'main']
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = '🔖 '
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+[git_metrics]
+# added_style = 'bold blue'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+disabled = false
+
+[git_status]
+conflicted = '🏳'
+# ahead = '🏎💨'
+# behind = '😰'
+# diverged = '😵'
+up_to_date = '✓'
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](green)'
+renamed = '👅'
+# deleted = '🗑'
+deleted = ''
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+
+[time]
+disabled = false
+format = 'at 🕙[\[ $time \]]($style) '
+style = "bg:#1d2230"
+time_format = '%T'
+utc_time_offset = '+5.5'
+# time_range = '10:00:00-14:00:00'
+
+# [time]
+# disabled = false
+# time_format = "%R" # Hour:Minute Format
+# style = "bg:#1d2230"
+# format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+
+# [time]
+# disabled = false
+# utc_time_offset = '+5.30'
+# format = '\[[$time]($style)\]'
+
