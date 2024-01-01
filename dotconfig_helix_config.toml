@@ -1,0 +1,23 @@
+theme = 'tokyonight_storm'
+# theme = 'snazzy'
+
+[editor]
+true-color = true
+line-number = "relative"
+mouse = true
+bufferline = "always"
+# rulers = [80, 100, 120]
+
+[editor.file-picker]
+# hidden = false
+# git-ignore = false
+# ignore = false
+# git-global = false
+
+[editor.lsp]
+display-inlay-hints = true
+
+[keys.normal]
+"C-tab" = ":bn"
+"C-S-tab" = ":bp"
+
